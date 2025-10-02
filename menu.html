@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>3Pavari — Menu</title>
+  <style>
+    :root{
+      --accent:#d67c6c;
+      --dark:#111;
+      --muted:#aaa;
+      --max:1100px;
+      --spacing:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{margin:0;color:#eee;background:var(--dark);line-height:1.6}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    header{position:fixed;left:0;right:0;top:0;z-index:40;background:rgba(20,20,20,0.8);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.05)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none}
+    nav a{text-decoration:none;color:#eee;font-weight:600}
+    .cta{background:none;color:#eee;padding:10px 20px;border:2px solid var(--accent);text-decoration:none;font-weight:700}
+    .menu-nav{display:flex;justify-content:center;gap:20px;margin-top:80px;position:sticky;top:72px;z-index:10;background:var(--dark);padding:12px 0}
+    .menu-nav a{cursor:pointer;color:#eee;text-decoration:none;font-weight:600;border-bottom:2px solid transparent;padding-bottom:4px}
+    .menu-nav a.active{border-color:var(--accent)}
+
+    section{padding:64px 0;position:relative}
+    .section-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;background:var(--dark);background-size:cover;background-position:center;opacity:0.3}
+
+    .menu-item{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+    .menu-item .name{font-size:20px;font-weight:600}
+    .menu-item .description{font-size:14px;color:var(--muted);margin-top:4px}
+    .menu-item .price{font-size:14px;color:var(--muted)}
+
+    footer{padding:28px 0;background:#000;border-top:1px solid rgba(255,255,255,0.08)}
+
+    @media (max-width:600px){
+      .menu-item{flex-direction:column}
+      .menu-item .price{margin-top:4px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="mark">3P</div>
+        <div>
+          <div style="font-weight:800">Three Chefs</div>
+          <div style="font-size:13px;color:var(--muted)">Contemporary Latvian cuisine</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#chefs">Chefs</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#gallery">Instagram</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="lang">EN</div>
+        <a class="cta" href="index.html#reservation">Reserve</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Navigation -->
+  <div class="menu-nav">
+    <a href="#food" class="active">Food</a>
+    <a href="#drinks">Drinks</a>
+  </div>
+
+  <main>
+    <!-- FOOD SECTION -->
+    <section id="food">
+      <div class="container">
+        <h2 style="text-align:center;margin-bottom:40px">Food Menu</h2>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">Grilled Salmon</div>
+            <div class="description">Fresh salmon with seasonal vegetables</div>
+          </div>
+          <div class="price">$24</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">Beef Tartare</div>
+            <div class="description">Classic preparation with mustard and capers</div>
+          </div>
+          <div class="price">$18</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">Vegetarian Risotto</div>
+            <div class="description">Creamy risotto with mushrooms and herbs</div>
+          </div>
+          <div class="price">$16</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DRINKS SECTION -->
+    <section id="drinks">
+      <div class="container">
+        <h2 style="text-align:center;margin-bottom:40px">Drinks Menu</h2>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">Red Wine</div>
+            <div class="description">Glass of house red wine</div>
+          </div>
+          <div class="price">$8</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">White Wine</div>
+            <div class="description">Glass of house white wine</div>
+          </div>
+          <div class="price">$8</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="name">Fresh Juice</div>
+            <div class="description">Seasonal fruits, freshly squeezed</div>
+          </div>
+          <div class="price">$5</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <div>© <strong>Three Chefs</strong> — Crafted with care</div>
+      <div style="color:var(--muted)">Designed to be inspired by a boutique tasting restaurant.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for menu nav links
+    const links = document.querySelectorAll('.menu-nav a');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({behavior: 'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
